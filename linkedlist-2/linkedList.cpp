@@ -11,13 +11,6 @@ linkedList::linkedList()
 }
 
 
-linkedList::linkedList()
-{
-  head = nullptr;
-  tail = nullptr;
-  count = 0;
-}
-
 void linkedList::insertAtEnd(int x)
 {
   //create a new list node
@@ -38,6 +31,22 @@ void linkedList::insertAtEnd(int x)
     }
   count++;
 }
+
+void linkedList::print() const
+{
+  node *temp = head;
+  while(temp != nullptr)
+    {
+      cout << temp -> num;
+
+      temp = temp -> next;
+      if (temp!= nullptr)
+	cout << " -> ";
+    }
+  cout << endl;
+
+}
+
 
 
 
